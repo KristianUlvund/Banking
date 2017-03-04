@@ -1,0 +1,127 @@
+﻿@using TheBank.Model;
+@using TheBank.Controllers;
+    @{
+        AdminController controller = new AdminController();
+        BLL.AdminBLL adminBLL = new BLL.AdminBLL();
+        if (ViewBag.UserInfo == null)
+        {
+            ViewBag.UserInfo = (string[])Session["pID"];
+        }
+    }
+
+    <div class="row adminOverviewRow">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2><span class="glyphicon glyphicon-eye-open"></span> USER OVERVIEW</h2>
+
+            <div class="list-group">
+                <div class="list-group-item active activeAdmin">Users</div>
+
+                <!--TODO: Kontakt SessionPlatform om listAccounts istedenfor DB-->
+                @{
+
+                    List<Customer> customers = adminBLL.getAllCustomers();
+                }
+
+                @foreach (var c in customers)
+            {
+                    <a class="list-group-item user" data-accNmbr="@c.personalIdentification">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="list-group-item-text"><strong>@c.firstname @c.lastname</strong></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="list-group-item-text"><em>@c.personalIdentification</em></p>
+                            </div>
+                        </div>
+                    </a>
+                }
+
+            </div>
+
+            <div class="list-group">
+                <div class="list-group-item active activeAdmin">Payments</div>
+                @{
+                    List<TransactionPresentation> transactions = controller.listTransactions(false);
+                }
+                @if (transactions == null)
+            {
+                    <a class="list-group-item">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="list-group-item-text">There are no payments to execute</p>
+                            </div>
+                        </div>
+                    </a>
+                }
+                else
+                {
+                    foreach (var t in transactions)
+                    {
+                        <div class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <p class="list-group-item-text"><strong>@t.fromAccount</strong></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="list-group-item-text"><strong>@t.toAccount</strong></p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <p class="list-group-item-text"><strong>@t.message</strong></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="list-group-item-text"><strong>@t.amount</strong></p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <button class="btn btn-info" id="@t.ID" onclick="executePayment('@t.ID')">Execute</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function ()
+        {
+            $('.user').click(function (e)
+            {
+                var $inspectPersonalID = $(this).attr('data-accNmbr');
+                $.ajax({
+                    type: "POST",
+                    data: { inspectPersonalID: $inspectPersonalID },
+                    url: '@Url.Action("InspectUser","Admin")',
+                    success: function (result) { $('#content').html(result) }
+                });
+            });
+        });
+
+        function executePayment($id)
+        {
+            $.ajax({
+                type: "POST",
+                data: { transactionID: $id },
+                url: '@Url.Action("executeTransaction", "Admin")',
+                success: function (result)
+                {
+                    var btn = $('#' + $id);
+                    if (result == "ok") {
+                        btn.html("Completed");
+                        btn.attr('disabled', true);
+                        btn.attr('class', 'btn btn-success');
+                    }
+                    else
+                    {
+                        btn.html("Error");
+                        btn.attr('disabled', true);
+                        btn.attr('class', 'btn btn-warning');
+                        alert(result);
+                    }
+                }
+            });
+        }
+    </script>

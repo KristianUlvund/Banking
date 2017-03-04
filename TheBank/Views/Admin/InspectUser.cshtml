@@ -1,0 +1,138 @@
+﻿@model List<TheBank.Model.DataContainer.Account.AccountPrimitive>
+@{
+    ViewBag.UserInfo = (string[])Session["userInfo"];
+    ViewBag.inspectPersonalID = Session["inspectPersonalID"];
+}
+
+<div class="row inspectUserRow">
+    <!--Col 2-->
+    <div class="col-md-2"></div>
+    <!--Col 8-->
+    <div class="col-md-8">
+
+        <h2>@ViewBag.inspectPersonalID[0]</h2>
+        <div id="editUser">
+            <div class="row">
+
+                <!--Col 6-->
+                <div class="col-md-6">
+                    <div class="inputs">
+                        <div class="form-group">
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[1]" id="firstname" placeholder="Firstname" />
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[5]" id="phonenumber" placeholder="Phonenumber" />
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[6]" id="zipcode" placeholder="Zipcode" />
+                        </div>
+                    </div>
+                </div>
+
+                <!--Col 6-->
+                <div class="col-md-6">
+                    <div class="inputs">
+                        <div class="form-group">
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[2]" id="lastname" placeholder="Lastname" />
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[3]" id="email" placeholder="Email" />
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[7]" id="city" placeholder="City" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="inputs">
+                        <div class="form-group">
+                            <input type="text" class="input-admin-edit form-control" value="@ViewBag.inspectPersonalID[4]" id="address" placeholder="Address" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" onclick="btnSave()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-group">
+            <div class="list-group-item active activeAdmin">Accounts</div>
+
+            @foreach (var a in Model)
+            {
+                string disabled = a.active ? "account" : "list-group-item-danger account";
+                <a class="list-group-item @disabled" data-accNmbr="@a.accountNumber">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text"><strong>@a.accountName</strong></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text"><em>@String.Format("{0:####.##.#####}", a.accountNumber)</em></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text">@String.Format("{0:c}", a.accountBalance) </p>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+    <!--Col 2-->
+    <div class="col-md-2"></div>
+</div>
+
+<script type="text/javascript">
+
+    var origFirstname = "@ViewBag.inspectPersonalID[1]";
+    var origLastname = "@ViewBag.inspectPersonalID[2]";
+    var origEmail = "@ViewBag.inspectPersonalID[3]";
+    var origAddress = "@ViewBag.inspectPersonalID[4]";
+    var origPhonenumber = "@ViewBag.inspectPersonalID[5]";
+    var origPostalcode = "@ViewBag.inspectPersonalID[6]";
+    var origCity = "@ViewBag.inspectPersonalID[7]";
+
+    // Oppsummering:
+    //     Legger til klikk funksjonalitet på list-item divene slik at brukeren blir omdirigert
+    //     til en tabellside for fullførte transaksjoner.
+    //
+    $(document).ready(function ()
+    {
+        //TODO: Lag en sjekk om brukeren har endret verdier i felt fra origFirstname etc., Disable saveknapp om det ikke er endret
+        $('.account').click(function (e)
+        {
+            var $accountNumber = $(this).attr('data-accNmbr');
+            $.ajax({
+                type: "POST",
+                data: { accountNumber: $accountNumber },
+                url: '@Url.Action("InspectAccount","Admin")',
+                success: function (result) { $('#content').html(result) }
+            });
+        });
+    });
+
+    function btnSave()
+    {
+        var customer = {
+            personalIdentification: "@ViewBag.inspectPersonalID[0]",
+            firstname: $('#firstname').val(),
+            lastname: $('#lastname').val(),
+            address: $('#address').val(),
+            zipcode: $('#zipcode').val(),
+            city: $('#city').val(),
+            phoneNumber: $('#phonenumber').val(),
+            email: $('#email').val()
+        };
+
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(customer),
+            contentType: "application/json;charset=utf-8",
+            url: '@Url.Action("editUser","Admin")',
+            success: function (result)
+            {
+                alert("Data saved to database");
+
+                if ("@ViewBag.inspectPersonalID[0]" === "@ViewBag.UserInfo[0]")
+                {
+                    loadNav();
+                }
+            }
+        });
+    }
+</script>
+
+
+

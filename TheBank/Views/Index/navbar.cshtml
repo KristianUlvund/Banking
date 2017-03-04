@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.loggedIn = (bool)Session["loggedIn"];
+    if (ViewBag.loggedIn)
+    {
+        ViewBag.UserInfo = (string[])Session["userInfo"];
+        ViewBag.isAdmin = (ViewBag.UserInfo[3] == "true");
+    }
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand" onclick="loadPage('UserOverview')">The Bank</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#" onclick="loadPage('UserOverview')">Home</a></li>
+                @if (ViewBag.loggedIn)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Payments<span class="caret"></span></a>
+                        <ul class="dropdown-menu disabled">
+                            <li><a onclick="loadPage('RegisterPayment')">Register New</a></li>
+                            <li><a onclick="loadPage('ViewPayments')">View Pending</a></li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="navbar-right">
+                @if (ViewBag.loggedIn)
+                {
+                    <li><p class="navbar-text">Logged in as @ViewBag.Userinfo[1] @ViewBag.UserInfo[2]</p></li>
+                    if(ViewBag.isAdmin)
+                    {
+                        <li><a href="#" onclick="loadPage('AdminOverview')">Admin</a></li>
+                    }
+                    <li><a href="#" onclick="logout()">Log out</a></li>
+                }
+                else
+                {
+                    <li><p class="navbar-text">Not logged in</p></li>
+                }
+            </ul>
+
+        </div>
+    </div>
+</div>

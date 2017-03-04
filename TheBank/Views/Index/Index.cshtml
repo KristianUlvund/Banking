@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.UserInfo = (string[])Session["userInfo"];
+    ViewBag.loggedIn = (bool)Session["loggedIn"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBank</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/StyleSheets/Style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/asyncLoadResource.js"></script>
+</head>
+<body>
+    <div id="nav"></div>
+
+    <div class="container" id="content">
+
+    </div>
+    <div id="loading"></div>
+    <footer></footer>
+
+    <script>
+        $(function ()
+        {
+            initializeSpinner();
+            loadNav();
+            loadPage("UserOverview");
+        });
+
+        function logout()
+        {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("logOut","Index")',
+                success: function (result)
+                {
+                    $('#content').html(result);
+                    loadNav();
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

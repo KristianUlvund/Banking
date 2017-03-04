@@ -1,0 +1,130 @@
+﻿@model TheBank.Model.AccountPresentation
+@{
+    ViewBag.inspectPersonalID = Session["inspectPersonalID"];
+    ViewBag.UserInfo = (string[])Session["userInfo"];
+}
+
+<div class="row inspectAccountRow">
+    <!--Col 2-->
+    <div class="col-md-2"></div>
+    <!--Col 8-->
+    <div class="col-md-8">
+
+        <h2>@Model.accountNumber</h2>
+        <div id="editUser">
+            <div class="row">
+
+                <!--Col 6-->
+                <div class="col-md-12">
+                    <div class="inputs">
+                        <div class="form-group">
+                            <input type="text" class="input-admin-edit form-control" value="@Model.name" id="account" placeholder="Accountname" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--Col 8-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <button class="btn btn-default" onclick="btnSave()">Save</button>
+                    </div>
+                    <div class="form-group">
+                        @if (Model.active)
+                        {
+                            <button class="btn btn-danger" id="activeBtn" onclick="btnDeactivate()">Deactivate</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-warning" id="activeBtn" onclick="btnReactivate()">Reactivate</button>
+                        }
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Col 2-->
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var $origAccountName = "@Model.name";
+    var $accountNumber = "@Model.accountNumber";
+
+    function btnSave()
+    {
+        var $accountName = $('#account').val();
+
+        if ($accountName === $origAccountName)
+        {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            data: { accountName: $accountName, accountNumber: $accountNumber },
+            url: '@Url.Action("editAccount","Admin")',
+            success: function (result)
+            {
+                alert("Data saved to database");
+                var $inspectPersonalID = '@ViewBag.inspectPersonalID[0]';
+                $.ajax({
+                    type: "POST",
+                    data: { inspectPersonalID: $inspectPersonalID },
+                    url: '@Url.Action("InspectUser","Admin")',
+                    success: function (result)
+                    {
+                        $('#content').html(result)
+                    }
+                });
+            }
+        });
+    }
+
+    function btnDeactivate()
+    {
+        if (confirm("Are you sure you want to deactivate this account?"))
+        {
+            $.ajax({
+                type: "POST",
+                data: { accountNumber: $accountNumber },
+                url: '@Url.Action("deactivateAccount", "Admin")',
+                success: function (result)
+                {
+                    if (result === "False")
+                    {
+                        alert("Could not deactive this account. The balance may be higher than zero.");
+                        return;
+                    }
+                    $('#activeBtn').html('Reactivate');
+                    $('#activeBtn').attr('onClick', 'btnReactivate()');
+                    $('#activeBtn').attr('class', 'btn btn-warning');
+                }
+            });
+        }
+    }
+
+    function btnReactivate()
+    {
+        if (confirm("Are you sure you want to reactivate this account?"))
+        {
+            $.ajax({
+                type: "POST",
+                data: { accountNumber: $accountNumber },
+                url: '@Url.Action("deactivateAccount", "Admin")',
+                success: function (result)
+                {
+                    $('#activeBtn').html('Deactivate');
+                    $('#activeBtn').attr('onClick', 'btnDeactivate()');
+                    $('#activeBtn').attr('class', 'btn btn-danger');
+                }
+            });
+        }
+    }
+</script>
+
+
+

@@ -1,0 +1,90 @@
+﻿<div class="row loginRow">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="loginForm">
+            <label class="login-label">LOGIN</label>
+            <div class="inputs">
+                <div class="form-group">
+                    <input type="text" class="input-login form-control" placeholder="Social Security" maxlength="11" pattern="[0-9]{11}" id="pID"/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="input-login form-control" placeholder="Password" pattern="[0-9]{11}" id="password"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="input-login form-control" placeholder="" maxlength="6" id="bankID" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" onclick="dummyRandomNumBtn()" id="genBtn">Generate Key</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" onclick="btnLogin()"><span class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+            <div class="form-group">
+                <div class="" id="alertMessage" role="alert"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+@Html.ActionLink("Insert test data", "Initialize_Test_Data", "Index")
+
+<script type="text/javascript">
+
+    $(document).ready(function ()
+    {
+        $('#validPID').on('input', function ()
+        {
+            var input = $('#validPID');
+
+            if ($.isNumeric(input.val()) === false)
+            {
+                var newValue = input.val().substr(0, input.val().length - 1);
+                input.val(newValue);
+            }
+        });
+    });
+
+    function dummyRandomNumBtn()
+    {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("produceRandomNumber","Ajax")',
+            success: function (result)
+            {
+                console.log(result.length);
+                $('#bankID').val(result);
+            }
+        })
+    }
+
+    function btnLogin()
+    {
+        $('#alertMessage').removeClass();
+        $('#alertMessage').html("");
+
+        var $pID = $('#pID').val();
+        var $password = $('#password').val();
+
+        $.ajax({
+            type: "POST",
+            data: { pID: $pID, password: $password },
+            url: '@Url.Action("logIn","Ajax")',
+            success: function (result)
+            {
+                if (result === "false")
+                {
+                    $('#password').val("");
+                    $('#alertMessage').addClass('alert alert-danger');
+                    $('#alertMessage').html("Incorrect password or personal identification entered. Please try again.");
+                    return;
+                }
+                loadNav();
+                loadPage("UserOverview");
+            }
+        });
+
+    }
+
+</script>

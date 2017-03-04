@@ -1,0 +1,1254 @@
+
+Date: 08.11.2016 14.27.34
+
+personalIdentification			
+22222222222			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			500			Vi er skuls			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+aID			accountNumber			name			balance			active			
+0			44444444444			Savings account			10000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+accTypeID			card			interest			limit			yearlyFee			
+0			True			3			10000			0			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+aID			accountNumber			name			balance			active			
+0			11111111111			Savings account			4100,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			250			Mat greier			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+aID			accountNumber			name			balance			active			
+0			55555555555			Savings account			2500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1500			Nasty stuff			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+aID			accountNumber			name			balance			active			
+0			22222222222			Checkings account			1533,4			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+aID			accountNumber			name			balance			active			
+0			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+11111111111			Ola			Nordmann			Nordmannveien 32			07070707			OlaNordmann@example.com			System.Byte[]			p5WevkpyzoSfWw==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+postalCode			city			
+0707			Oslo			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+22222222222			Kari			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			zx9t6bd4eNDplg==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.34
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Nils			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			jYj3WWn6dNSvwQ==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.56
+
+tID			date			amount			message			isTransferred			
+3			08.11.2016			1500			Nasty stuff			False			(Original values)
+3			08.11.2016			1500			Nasty stuff			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.56
+
+aID			accountNumber			name			balance			active			
+5			55555555555			Savings account			2500			True			(Original values)
+5			55555555555			Savings account			1000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.27.56
+
+aID			accountNumber			name			balance			active			
+1			44444444444			Savings account			10000			True			(Original values)
+1			44444444444			Savings account			11500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.28.06
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			False			(Original values)
+4			33333333333			Loan account			0			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.28.14
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			True			(Original values)
+4			33333333333			Loan account nå aktive igjen			0			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.28.25
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+11111111111			Ola			Nordmann			Nordmannveien 32			07070707			OlaNordmann@example.com			System.Byte[]			p5WevkpyzoSfWw==			True			(Original values)
+11111111111			Ola-Jørgen			Nordmann			Nordmannveien 32			07070707			OlaNordmann@example.com			System.Byte[]			p5WevkpyzoSfWw==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.28.42
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account nå aktive igjen			0			True			(Original values)
+4			33333333333			Loan account nå aktive igjen			0			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.05
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			100			Dette er en test			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.40
+
+tID			date			amount			message			isTransferred			
+4			09.11.2016			100			Dette er en test			False			(Original values)
+4			08.11.2016			100			Dette er en test			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.43
+
+tID			date			amount			message			isTransferred			
+4			08.11.2016			100			Dette er en test			False			(Original values)
+4			08.11.2016			100			Dette er en test			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.43
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			4100,5			True			(Original values)
+2			11111111111			Savings account			4000,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.43
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account nå aktive igjen			0			False			(Original values)
+4			33333333333			Loan account nå aktive igjen			100			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.29.51
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account nå aktive igjen			100			False			(Original values)
+4			33333333333			Loan account nå aktive igjen			100			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+personalIdentification			
+22222222222			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			500			Vi er skuls			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+aID			accountNumber			name			balance			active			
+0			44444444444			Savings account			10000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+accTypeID			card			interest			limit			yearlyFee			
+0			True			3			10000			0			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+aID			accountNumber			name			balance			active			
+0			11111111111			Savings account			4100,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			250			Mat greier			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+aID			accountNumber			name			balance			active			
+0			55555555555			Savings account			2500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1500			Nasty stuff			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+aID			accountNumber			name			balance			active			
+0			22222222222			Checkings account			1533,4			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+aID			accountNumber			name			balance			active			
+0			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+11111111111			Ola			Nordmann			Nordmannveien 32			07070707			OlaNordmann@example.com			System.Byte[]			kq959+VYZzYfag==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+postalCode			city			
+0707			Oslo			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+22222222222			Kari			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			o21PlueSexu87A==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.29
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Nils			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			nfmaEy3UCIJJaA==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.59
+
+tID			date			amount			message			isTransferred			
+3			08.11.2016			1500			Nasty stuff			False			(Original values)
+3			08.11.2016			1500			Nasty stuff			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.59
+
+aID			accountNumber			name			balance			active			
+5			55555555555			Savings account			2500			True			(Original values)
+5			55555555555			Savings account			1000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 14.33.59
+
+aID			accountNumber			name			balance			active			
+1			44444444444			Savings account			10000			True			(Original values)
+1			44444444444			Savings account			11500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.34
+
+personalIdentification			
+22222222222			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.34
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			500			Vi er skuls			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.34
+
+aID			accountNumber			name			balance			active			
+0			44444444444			Savings account			10000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+accTypeID			card			interest			limit			yearlyFee			
+0			True			3			10000			0			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+aID			accountNumber			name			balance			active			
+0			11111111111			Savings account			4100,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			250			Mat greier			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+aID			accountNumber			name			balance			active			
+0			55555555555			Savings account			2500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1500			Nasty stuff			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+aID			accountNumber			name			balance			active			
+0			22222222222			Checkings account			1533,4			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+aID			accountNumber			name			balance			active			
+0			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+11111111111			Ola			Nordmann			Nordmannveien 32			07070707			OlaNordmann@example.com			System.Byte[]			xUhLZ7afdzqAxw==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+postalCode			city			
+0707			Oslo			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+22222222222			Kari			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			006Vg8wn/Rw59w==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 16.04.35
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Nils			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.14.22
+
+aID			accountNumber			name			balance			active			
+5			55555555555			Savings account			2500			True			(Original values)
+5			55555555555			Savings accounts			2500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.14.35
+
+aID			accountNumber			name			balance			active			
+5			55555555555			Savings accounts			2500			True			(Original values)
+5			55555555555			Savings account			2500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.14.46
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Nils			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(Original values)
+33333333333			Nils-Erik			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.15.44
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			False			(Original values)
+4			33333333333			Loan account			0			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.15.53
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			True			(Original values)
+4			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.16.01
+
+tID			date			amount			message			isTransferred			
+3			08.11.2016			1500			Nasty stuff			False			(Original values)
+3			08.11.2016			1500			Nasty stuff			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.16.01
+
+aID			accountNumber			name			balance			active			
+5			55555555555			Savings account			2500			True			(Original values)
+5			55555555555			Savings account			1000			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 17.16.01
+
+aID			accountNumber			name			balance			active			
+1			44444444444			Savings account			10000			True			(Original values)
+1			44444444444			Savings account			11500			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 18.11.46
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1000			Masse penger			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 18.14.43
+
+tID			date			amount			message			isTransferred			
+4			08.11.2016			1000			Masse penger			False			(Original values)
+4			08.11.2016			1000			Masse masse penger			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.07.33
+
+tID			date			amount			message			isTransferred			
+4			08.11.2016			1000			Masse masse penger			False			(Original values)
+4			08.11.2016			1000			Masse penger			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.07.59
+
+tID			date			amount			message			isTransferred			
+4			08.11.2016			1000			Masse penger			False			(Original values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.27.46
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			2000			Money			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.29.32
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1500			Money			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.31.34
+
+tID			date			amount			message			isTransferred			
+6			08.11.2016			1500			Money			False			(Original values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.32.58
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1200			Penger			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.33.19
+
+tID			date			amount			message			isTransferred			
+7			08.11.2016			1200			Penger			False			(Original values)
+7			09.11.2016			1200			Penger			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.33.34
+
+tID			date			amount			message			isTransferred			
+5			08.11.2016			2000			Money			False			(Original values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.33.42
+
+tID			date			amount			message			isTransferred			
+7			09.11.2016			1200			Penger			False			(Original values)
+7			08.11.2016			1200			Penger ja			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.34.50
+
+tID			date			amount			message			isTransferred			
+7			08.11.2016			1200			Penger ja			False			(Original values)
+7			08.11.2016			1200			Penger ja			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.34.50
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			4100,5			True			(Original values)
+2			11111111111			Savings account			2900,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.34.50
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			1533,4			True			(Original values)
+3			22222222222			Checkings account			2733,4			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.36.10
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			1212			Deilig daaaaa			False			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.36.32
+
+tID			date			amount			message			isTransferred			
+8			08.11.2016			1212			Deilig daaaaa			False			(Original values)
+8			08.11.2016			1212			Deilig daaaaa			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.36.32
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			2900,5			True			(Original values)
+2			11111111111			Savings account			1688,5			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.36.32
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			2733,4			True			(Original values)
+3			22222222222			Checkings account			3945,4			True			(New values)
+----------------------------------------------
+
+
+Date: 08.11.2016 20.37.11
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			False			(Original values)
+4			33333333333			Loan account			0			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 08.28.32
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			100			Mat greier			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 08.32.34
+
+tID			date			amount			message			isTransferred			
+9			09.11.2016			100			Mat greier			False			(Original values)
+9			09.11.2016			100			Mat greier ja			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 09.56.42
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			True			(Original values)
+4			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 09.58.00
+
+tID			date			amount			message			isTransferred			
+9			09.11.2016			100			Mat greier ja			False			(Original values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.09.47
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			False			(Original values)
+4			33333333333			Loan account			0			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.16.08
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			100			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.19.16
+
+tID			date			amount			message			isTransferred			
+10			09.11.2016			100			Betalt			False			(Original values)
+10			09.11.2016			1000			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.19.26
+
+tID			date			amount			message			isTransferred			
+10			09.11.2016			1000			Betalt			False			(Original values)
+10			09.11.2016			10000000000			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.21.57
+
+tID			date			amount			message			isTransferred			
+10			09.11.2016			10000000000			Betalt			False			(Original values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.23.59
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			500			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 10.26.19
+
+tID			date			amount			message			isTransferred			
+11			09.11.2016			500			Betalt			False			(Original values)
+11			09.11.2016			100			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.34.02
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			10			moneeeeey			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.35.40
+
+tID			date			amount			message			isTransferred			
+0			08.11.2016			200			lol			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.44
+
+tID			date			amount			message			isTransferred			
+13			08.11.2016			200			lol			False			(Original values)
+13			08.11.2016			200			lol			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.44
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			1688,5			True			(Original values)
+2			11111111111			Savings account			1488,5			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.44
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			3945,4			True			(Original values)
+3			22222222222			Checkings account			4145,4			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.46
+
+tID			date			amount			message			isTransferred			
+12			09.11.2016			10			moneeeeey			False			(Original values)
+12			09.11.2016			10			moneeeeey			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.46
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			1488,5			True			(Original values)
+2			11111111111			Savings account			1478,5			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.46
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			4145,4			True			(Original values)
+3			22222222222			Checkings account			4155,4			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.49
+
+tID			date			amount			message			isTransferred			
+11			09.11.2016			100			Betalt			False			(Original values)
+11			09.11.2016			100			Betalt			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.49
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			1478,5			True			(Original values)
+2			11111111111			Savings account			1378,5			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.36.49
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			4155,4			True			(Original values)
+3			22222222222			Checkings account			4255,4			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 12.38.12
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Nils-Erik			Nordmann			Nordmannveien 32			05050505			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(Original values)
+33333333333			Kalle			Nordmann			Nordmannveien 32			10223933			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.18.09
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			1500			maaaaasse penger			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.18.29
+
+tID			date			amount			message			isTransferred			
+0			09.11.2016			2000			Endelig penger igjen			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.19.15
+
+tID			date			amount			message			isTransferred			
+14			09.11.2016			1500			maaaaasse penger			False			(Original values)
+14			09.11.2016			2000			Endelig penger igjen			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.19.37
+
+tID			date			amount			message			isTransferred			
+15			09.11.2016			2000			Endelig penger igjen			False			(Original values)
+15			09.11.2016			2000			Gratis			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.19.41
+
+tID			date			amount			message			isTransferred			
+14			09.11.2016			2000			Endelig penger igjen			False			(Original values)
+14			09.11.2016			2000			Gratis			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.20.12
+
+tID			date			amount			message			isTransferred			
+15			09.11.2016			2000			Gratis			False			(Original values)
+15			09.11.2016			2000			Penger			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.20.26
+
+tID			date			amount			message			isTransferred			
+14			09.11.2016			2000			Gratis			False			(Original values)
+14			09.11.2016			2000			Penger			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.20.50
+
+tID			date			amount			message			isTransferred			
+15			09.11.2016			2000			Penger			False			(Original values)
+15			09.11.2016			1000			nisse			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.20.56
+
+tID			date			amount			message			isTransferred			
+14			09.11.2016			2000			Penger			False			(Original values)
+14			09.11.2016			1000			nisse			False			(New values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.21.27
+
+tID			date			amount			message			isTransferred			
+15			09.11.2016			1000			nisse			False			(Original values)
+----------------------------------------------
+
+
+Date: 09.11.2016 16.21.28
+
+tID			date			amount			message			isTransferred			
+14			09.11.2016			1000			nisse			False			(Original values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.06.30
+
+tID			date			amount			message			isTransferred			
+0			10.11.2016			100			Betalt igjen			False			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.06.50
+
+tID			date			amount			message			isTransferred			
+16			10.11.2016			100			Betalt igjen			False			(Original values)
+16			10.11.2016			100			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.07.14
+
+tID			date			amount			message			isTransferred			
+16			10.11.2016			100			Betalt			False			(Original values)
+16			10.11.2016			100			Betalt			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.07.14
+
+aID			accountNumber			name			balance			active			
+2			11111111111			Savings account			1378,5			True			(Original values)
+2			11111111111			Savings account			1278,5			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.07.14
+
+aID			accountNumber			name			balance			active			
+3			22222222222			Checkings account			4255,4			True			(Original values)
+3			22222222222			Checkings account			4355,4			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.07.31
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+33333333333			Kalle			Nordmann			Nordmannveien 32			10223933			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(Original values)
+33333333333			Kalle-klovn			Nordmann			Nordmannveien 32			10223933			NilsNordmann@example.com			System.Byte[]			dtyPZvoi8NbGyg==			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.08.16
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+22222222222			Kari			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			006Vg8wn/Rw59w==			True			(Original values)
+22222222222			Kari-karri			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			006Vg8wn/Rw59w==			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.08.25
+
+personalIdentification			firstname			lastname			address			phoneNumber			email			password			salt			active			
+22222222222			Kari-karri			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			006Vg8wn/Rw59w==			True			(Original values)
+22222222222			Kari			Nordmann			Nordmannveien 32			06060606			KariNordmann@example.com			System.Byte[]			006Vg8wn/Rw59w==			True			(New values)
+----------------------------------------------
+
+
+Date: 10.11.2016 09.51.56
+
+tID			date			amount			message			isTransferred			
+0			10.11.2016			100			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 10.10.07
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			100			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.12.24
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			100			betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.12.51
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			100			Yey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.22.59
+
+tID			date			amount			message			isTransferred			
+0			12.11.2016			1231			hello			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.23.11
+
+tID			date			amount			message			isTransferred			
+8			11.11.2016			12312			hello			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.26.12
+
+tID			date			amount			message			isTransferred			
+0			13.11.2016			12311			hey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.27.05
+
+tID			date			amount			message			isTransferred			
+9			12.11.2016			1231			hello			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.30.30
+
+tID			date			amount			message			isTransferred			
+10			13.11.2016			12311			hey			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.31.30
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			11111			lol			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.31.48
+
+tID			date			amount			message			isTransferred			
+6			11.11.2016			12312			hello			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.33.01
+
+tID			date			amount			message			isTransferred			
+11			11.11.2016			11111			lol			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.33.13
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			123			go			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.33.20
+
+tID			date			amount			message			isTransferred			
+12			11.11.2016			123			go			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.33.34
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			11111			hey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.34.13
+
+tID			date			amount			message			isTransferred			
+0			12.11.2016			212			new			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.34.24
+
+tID			date			amount			message			isTransferred			
+13			11.11.2016			11111			hey			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.34.26
+
+tID			date			amount			message			isTransferred			
+14			12.11.2016			212			new			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.34.57
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			123			new			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.35.16
+
+tID			date			amount			message			isTransferred			
+0			13.11.2016			1333			veryNew			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.35.21
+
+tID			date			amount			message			isTransferred			
+16			13.11.2016			1333			veryNew			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.35.22
+
+tID			date			amount			message			isTransferred			
+15			11.11.2016			123			new			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.39.28
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			False			(Original values)
+4			33333333333			Loan account			0			True			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.39.42
+
+tID			date			amount			message			isTransferred			
+0			12.11.2016			1231			hey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.39.55
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			2211			new			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.40.01
+
+tID			date			amount			message			isTransferred			
+18			11.11.2016			2211			new			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 11.40.04
+
+tID			date			amount			message			isTransferred			
+17			12.11.2016			1231			hey			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 12.21.56
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			250			Betalt			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 12.22.05
+
+tID			date			amount			message			isTransferred			
+19			11.11.2016			250			Betalt			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 12.22.32
+
+aID			accountNumber			name			balance			active			
+4			33333333333			Loan account			0			True			(Original values)
+4			33333333333			Loan account			0			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 13.02.59
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			123			løse			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 13.03.11
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			11			hey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 13.03.20
+
+tID			date			amount			message			isTransferred			
+20			11.11.2016			123			løse			False			(Original values)
+20			11.11.2016			11			hey			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 13.25.11
+
+tID			date			amount			message			isTransferred			
+21			11.11.2016			11			hey			False			(Original values)
+21			11.11.2016			11			yoooo			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 13.25.24
+
+tID			date			amount			message			isTransferred			
+21			11.11.2016			11			yoooo			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 16.15.26
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			124			mess			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 16.20.59
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			1245			messa			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 16.42.08
+
+tID			date			amount			message			isTransferred			
+23			11.11.2016			1245			messa			False			(Original values)
+23			11.11.2016			1245			messi			False			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 16.42.17
+
+tID			date			amount			message			isTransferred			
+23			11.11.2016			1245			messi			False			(Original values)
+----------------------------------------------
+
+
+Date: 11.11.2016 19.59.45
+
+aID			accountNumber			name			balance			active			
+1			44444444444			Savings account			11500			True			(Original values)
+1			44444444444			Savings accounts			11500			True			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 19.59.54
+
+aID			accountNumber			name			balance			active			
+1			44444444444			Savings accounts			11500			True			(Original values)
+1			44444444444			Savings account			11500			True			(New values)
+----------------------------------------------
+
+
+Date: 11.11.2016 20.01.35
+
+tID			date			amount			message			isTransferred			
+0			11.11.2016			10			Betalt			False			(New values)
+----------------------------------------------
+

@@ -1,0 +1,11 @@
+Date: 09.11.2016 10.10.31
+
+Line: 101
+
+Message: Objektreferanse er ikke satt til en objektforekomst.
+
+StackTrace:    ved TheBank.DAL.DB.registerTransaction(String thisAcc, String toAcc, Double newAmount, String newMessage, DateTime newDate) i C:\Users\Bruker\Source\Repos\TheBank\TheBank\DAL\DB.cs:linje 101
+
+
+-----------------------------------------------------------------------------
+

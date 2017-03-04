@@ -1,0 +1,60 @@
+﻿@model List<TheBank.Model.DataContainer.Account.AccountPrimitive>
+
+<div class="row userOverviewRow">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h2><span class="glyphicon glyphicon-eye-open"></span> MY OVERVIEW</h2>
+
+        <div class="list-group">
+            <div class="list-group-item active">Accounts</div>
+
+            @foreach (var a in Model)
+            {
+                string disabled = a.active ? "account" : "disabled";
+                <a class="list-group-item @disabled" data-accNmbr="@a.accountNumber">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text"><strong>@a.accountName</strong></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text"><em>@String.Format("{0:####.##.#####}", a.accountNumber)</em></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="list-group-item-text">@String.Format("{0:c}", a.accountBalance) </p>
+                        </div>
+                    </div>
+                </a>
+            }
+
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<script type="text/javascript">
+
+    // Oppsummering:
+    //     Legger til klikk funksjonalitet på list-item divene slik at brukeren blir omdirigert
+    //     til en tabellside for fullførte transaksjoner.
+    //
+    $(document).ready(function ()
+    {
+        $('.account').click(function (e)
+        {
+            var $accountNumber = $(this).attr('data-accNmbr');
+            $.ajax({
+                type: "POST",
+                data: { accountNumber: $accountNumber },
+                url: '@Url.Action("ViewAccount","SessionPlatform")',
+                success: function (result) {
+                    if (result === "")
+                    {
+                        result = "<h2> Kunne ikke laste siden </h2>";
+                    }
+                    $('#content').html(result)
+                }
+            });
+        });
+
+    });
+</script>

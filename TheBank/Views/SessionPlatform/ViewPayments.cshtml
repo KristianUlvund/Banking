@@ -1,0 +1,230 @@
+﻿@model  List<TheBank.Model.DataContainer.Account.AccountPrimitive>
+
+<div class="row viewPaymentsRow">
+    <div class="col-md-12">
+        <h2>PENDING TRANSACTIONS</h2>
+        <div class="list-group">
+            @foreach (var a in Model)
+            {
+                string disabled = a.active ? "account" : "disabled";
+                <a class="list-group-item pending @disabled" data-accNmbr="@a.accountNumber">@a.accountName (@a.accountNumber)</a>
+            }
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="datatable">
+            <table class="table table-hover" id="payments">
+                <thead>
+                    <tr>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Message
+                        </th>
+                        <th>
+                            To account
+                        </th>
+                        <th>
+                            Amount
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="editAndDelete-btn"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function loadPayments($accountNumber, $month, $year)
+    {
+        $.ajax({
+            type: "POST",
+            data: { accountNumber: $accountNumber, inMonth: $month, inYear: $year, isTransferred: false },
+            url: '@Url.Action("jsonTransaction","Ajax")',
+            dataType: 'json',
+            success: function (result)
+            {
+                $('.editAndDelete-btn').empty();
+                $('#payments tbody').empty();
+                if (result === "error")
+                {
+                    var message = "Error: Could not fetch transactions. Please try again later";
+                    var row =
+                        '<tr>' +
+                            '<td>' +
+                                message
+                            '</td>' +
+                        '</tr>';
+                    $('#payments tbody').append(row);
+                }
+                else if (result.length == 0)
+                {
+                    var message = "No pending transactions available";
+                    var row =
+                        '<tr>' +
+                            '<td>' +
+                                message
+                            '</td>' +
+                        '</tr>';
+                    $('#payments tbody').append(row);
+                }
+                else
+                {
+                    for (var t in result)
+                    {
+                        var row =
+                        '<tr class="input-edit clickable-row" data-id="' + result[t].ID + '">' +
+                            '<td>' +
+                                result[t].date +
+                            '</td>' +
+                            '<td>' +
+                                result[t].message +
+                            '</td>' +
+                            '<td>' +
+                                result[t].toAccount +
+                            '</td>' +
+                            '<td>' +
+                                result[t].amount +
+                            '</td>' +
+                        '</tr>';
+
+                        $('#payments tbody').append(row);
+                    }
+
+                    var buttons =
+                                '<input type="button" value="Edit" class="btn btn-warning disabled" id="editSave" />' +
+                                '<input type="button" value="Delete" class="btn btn-danger disabled" id="btn-delete" />';
+
+                    $('.editAndDelete-btn').append(buttons);
+                }
+            }
+        });
+    }
+    $('.account').click(function (e)
+    {
+        $accountNumber = $(this).attr('data-accNmbr');
+        $(this).addClass('activeAcc').siblings().removeClass('activeAcc');
+        loadPayments($accountNumber, date.getMonth() + 1, date.getFullYear());
+    });
+
+    //$('.account').first().trigger('click');
+
+    $('#payments').on('click', '.clickable-row', function (event)
+    {
+        selectPayments(this);
+    });
+
+    function selectPayments(p)
+    {
+        $(p).addClass('active').siblings().removeClass('active');
+        $('#btn-delete').removeClass('disabled');
+        $('#editSave').removeClass('disabled');
+        $("#editSave").on("click", editTransaction);
+        $("#btn-delete").on("click", deleteTransaction);
+        var rowValue = $(p).find('td:first').text();
+    }
+
+    function editTransaction()
+    {
+        var row = $('.active').first();
+        if (row === null)
+        {
+            return;
+        }
+
+        $('#payments').unbind();
+
+        var rowID = $('.active').first().attr('data-id');
+
+        var array = new Array();
+        for (i = 0; i < 4; i++)
+        {
+            var td = row.find('td').eq(i);
+            array[i] = td.text();
+        }
+
+        var date = array[0].split(".");
+
+        row.find('td').eq(0).html('<input class="input-login form-control" type="date" value="' + date[2] + "-" + date[1] + "-" + date[0] + '" id="date"/>');
+        row.find('td').eq(1).html('<input class="input-login form-control" type="text" value="' + array[1] + '" id="message"/>');
+        row.find('td').eq(2).html('<input class="input-login form-control" type="text" value="' + array[2] + '" id="toAccount"/>');
+        row.find('td').eq(3).html('<input class="input-login form-control" type="text" value="' + array[3] + '" id="amount" maxlength="5"/>');
+
+        $('#editSave').val("Save");
+        $("#editSave").off("click");
+        $('#editSave').on('click', saveChanges);
+    }
+
+    function saveChanges()
+    {
+        var rowID = $('.active').first().attr('data-id');
+        var date = $('#date').val();
+        var message = $('#message').val();
+        var toAccount = $('#toAccount').val();
+        var amount = $('#amount').val();
+
+        if (date === null)
+        {
+            alert("Please enter a valid date");
+            return;
+        }
+
+        var transaction = {
+            ID: rowID,
+            date: date,
+            amount: amount,
+            message: message,
+            fromAccount: $accountNumber,
+            toAccount: toAccount
+        };
+
+        $.ajax({
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(transaction),
+            url: '@Url.Action("editPayment","Ajax")',
+            dataType: 'json',
+            success: function (result)
+            {
+                loadPayments($accountNumber, month, year);
+            }
+        });
+        $('#payments').on('click', '.clickable-row', function (event) {
+            selectPayments(this);
+        });
+    }
+
+    function deleteTransaction()
+    {
+        var rowID = $('.active').first().attr('data-id');
+
+        $.ajax({
+            type: "POST",
+            data: { tID: rowID },
+            url: '@Url.Action("deleteTransaction","Ajax")',
+            dataType: 'json',
+            success: function (result)
+            {
+                if (result === "error") {
+                    alert("An error occured, please try again later");
+                }
+                loadPayments($accountNumber, month, year);
+            }
+        });
+    }
+
+    var date = new Date();
+    var month = date.getMonth()+1;
+    var year = date.getFullYear();
+    var $accountNumber;
+
+</script>
+
+
+
